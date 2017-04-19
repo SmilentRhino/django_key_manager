@@ -87,3 +87,5 @@ ENV/
 
 # Rope project settings
 .ropeproject
+django_key_manager/settings.py
+*.sqlite3
