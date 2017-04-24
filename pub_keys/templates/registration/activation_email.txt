@@ -1,0 +1,5 @@
+Dear {{ user }},
+
+    Thank you for join {{ site }}, please click the following url to activate your accounts in {{ expiration_days }}.
+    http://{{ site }}/accounts/activate/{{ activation_key }}
+
