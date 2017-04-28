@@ -6,5 +6,6 @@ from pub_keys.forms import PublicKeyForm
 
 class PublicKeyAdmin(admin.ModelAdmin):
     form = PublicKeyForm
+    readonly_fields = ('fingerprint',)
 
 admin.site.register(PublicKey, PublicKeyAdmin)

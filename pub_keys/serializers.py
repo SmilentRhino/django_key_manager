@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework import permissions
 from django.contrib.auth.models import User
 from pub_keys.models import PublicKey
 
@@ -11,3 +12,10 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username')
+
+class PubKeySerializer(serializers.ModelSerializer):
+    pub_keys = PublicKeySerializer(many=True,)
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'email')
+
